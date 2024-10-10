@@ -81,6 +81,14 @@ public class PlayerMovement : MonoBehaviour
             rb.drag = 0;
             anim.SetBool("isJumping", true);
         }
+        if (Input.GetKey(KeyCode.Mouse0))
+        {
+            Debug.Log("test");
+            anim.SetBool("isAttacking", true);
+        } else
+        {
+            anim.SetBool("isAttacking", false);
+        }
             
         Vector3 horizontalVelocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
         float playerSpeed = horizontalVelocity.magnitude;

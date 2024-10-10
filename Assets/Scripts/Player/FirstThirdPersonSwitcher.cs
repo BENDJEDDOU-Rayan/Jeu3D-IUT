@@ -9,7 +9,7 @@ public class FirstThirdPersonSwitcher : MonoBehaviour
     public Camera thirdPersonCamera;
     private PlayerControls controls;
 
-    private bool isFirstPerson = true;
+    private bool isFirstPerson = false;
 
     private void Awake()
     {
@@ -29,8 +29,8 @@ public class FirstThirdPersonSwitcher : MonoBehaviour
 
     void Start()
     {
-        firstPersonCamera.gameObject.SetActive(true);
-        thirdPersonCamera.gameObject.SetActive(false);
+        firstPersonCamera.gameObject.SetActive(false);
+        thirdPersonCamera.gameObject.SetActive(true);
     }
 
     void ChangeViewMode()
